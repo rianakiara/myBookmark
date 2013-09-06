@@ -1,0 +1,13 @@
+<div class="page-header">
+	<h1><%= @user.full_name %></h1>
+</div>
+
+<% if @bookmarks %>
+	<% @bookmarks.each do |status| %>
+		<div class="well">
+			<%= bookmark.content %>
+		</div>
+		<hr />
+		<%= link_to time_ago_in_words(bookmark.created_at), bookmark_path(status) %> ago
+	<% end %>
+<% end %>
